@@ -1,0 +1,31 @@
+def posicao_ponto(x, y, largura, altura):
+    origem_x = largura / 2
+    origem_y = altura / 2
+
+    posicao = []
+
+    if x < origem_x:
+        posicao.append("Esquerda")
+    elif x > origem_x:
+        posicao.append("Direita")
+    else:
+        posicao.append("Centro")
+
+    if y < origem_y:
+        posicao.append("Baixo")
+    elif y > origem_y:
+        posicao.append("Cima")
+    else:
+        posicao.append("Centro")
+
+    return posicao
+
+#Test
+x_ponto = 5
+y_ponto = 3
+largura_retangulo = 6
+altura_retangulo = 4
+
+resultados = posicao_ponto(x_ponto,y_ponto,largura_retangulo,altura_retangulo)
+for posicao in resultados:
+    print (posicao)
